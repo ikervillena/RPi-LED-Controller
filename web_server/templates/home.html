@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seleccionar color y escala</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>    
+</head>
+<body>
+    <div class="container">
+        <h1>Seleccionar color y escala</h1>
+        <form id="color-form">
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color" class="color-input">
+            </div>
+            <div class="form-group">
+                <label for="scale">Escala:</label>
+                <input type="range" id="scale" name="scale" min="10" max="1023" class="scale-input">
+                <span class="scale-value"></span>
+            </div>
+        </form>
+        <div class="form-group">
+            <button id="random-color-btn" class="random-color-btn">Cambiar color aleatoriamente</button>
+        </div>
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" class="email-input">
+        </div>
+        <button id="send-email-btn" class="send-email-btn">Enviar información del color seleccionado</button>
+    </div>
+</body>
+</html>
